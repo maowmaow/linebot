@@ -1,8 +1,0 @@
-{
-    "port": 80,
-    "logger": {
-        "logDirectory": "public/.",
-        "fileNamePattern": "app-<DATE>.log",
-        "dateFormat": "YYYY-MM-DD"
-    }
-}

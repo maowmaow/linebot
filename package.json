@@ -4,19 +4,21 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",  
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Montri M.",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "config": "^1.21.0",
     "express": "^4.14.0",
     "simple-node-logger": "^0.93.12"
   },
-  "keywords": [ "node", "heroku" ],
+  "keywords": [
+    "node",
+    "heroku"
+  ],
   "engines": {
-      "node": "5.1.0"
+    "node": "5.1.0"
   }
 }

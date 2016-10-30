@@ -1,12 +1,18 @@
 'use strict';
 
-let config = require('config');
 let simpleNodeLogger = require('simple-node-logger');
-let log = simpleNodeLogger.createRollingFileLogger(config.logger);
+let log = simpleNodeLogger.createRollingFileLogger({
+    "logDirectory": __dirname + "/public/.",
+    "fileNamePattern": "app-<DATE>.log",
+    "dateFormat": "YYYY-MM-DD"
+});
 
 let express = require('express');
 let app = express();
-app.use(express.static('public'));
+
+app.set('port', (process.env.PORT || 5000));
+
+app.use(express.static(__dirname + '/public'));
 
 let bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -20,7 +26,5 @@ app.post('/webhook', function(req, res, next) {
     res.send('ok');
 });
 
-let http = require('http').Server(app);
-http.listen(config.port);
-
+app.listen(app.get('port'), function() { console.log('Node app is running on port', app.get('port')); });
 
