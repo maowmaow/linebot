@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Montri M.",
@@ -14,6 +15,7 @@
     "express": "^4.14.0",
     "simple-node-logger": "^0.93.12"
   },
+  "keywords": [ "node", "heroku" ],
   "engines": {
       "node": "5.1.0"
   }
