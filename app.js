@@ -26,5 +26,10 @@ app.post('/webhook', function(req, res, next) {
     res.send('ok');
 });
 
+app.get('/auth', function(req, res, next) {
+    let code = req.query.code;
+    res.send('ok');
+});
+
 app.listen(app.get('port'), function() { console.log('Node app is running on port', app.get('port')); });
 
